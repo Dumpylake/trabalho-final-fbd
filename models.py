@@ -11,6 +11,14 @@ class animal(BaseModel):
     petshop_cnpj: int
     veterinario_cpf: int
 
+class animalUpdate(BaseModel):
+    nome: Optional[str] = None
+    alergias: Optional[str] = None
+    peso: Optional[int] = None
+    horario_atendimento: Optional[int] = None
+    petshop_cnpj: Optional[int] = None
+    veterinario_cpf: Optional[int] = None
+
 class cachorro(BaseModel):
     animal_num_registro: int
     especie: str
@@ -45,6 +53,13 @@ class cliente(BaseModel):
     numero: int
     bairro: str
     recepcionista_cpf: int
+
+class clienteUpdate(BaseModel):
+    nome: Optional[str] = None
+    rua: Optional[str] = None
+    numero: Optional[int] = None
+    bairro: Optional[str] = None
+    recepcionista_cpf: Optional[int] = None
 
 class cliente_celulares(BaseModel):
     cliente_id: int

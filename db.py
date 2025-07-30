@@ -5,5 +5,6 @@ def get_connection():
         dbname="petshop",
         user="postgres",
         password="postgres",
-        host="localhost"
+        host="localhost",
+        client_encoding='utf8'
     )
